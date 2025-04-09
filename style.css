@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+header {
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 11.5vh;
+  top: 0;
+
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-left: 3.75vw;
+  margin-right: 1.75vw;
+}
+
+.navBar ul {
+  font-size: 1.25vw;
+  text-decoration: none;
+  width: 29vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.navBar ul li {
+  list-style: none;
+}
+
+.navBar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navBar a img {
+  width: 7.5vw;
+  height: 9vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari e Opera */
+}
+
+
+.backgroundImg{
+  align-self: flex-start;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.backgroundImg img{
+  width: 100%;
+  align-self: flex-start;
+}
+
+.backgroundColor {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 106vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.containerHome {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.containerHome h1 {
+  color: white;
+  line-height: 10.5vh;
+
+  font-family: 'DM Sans';
+  font-size: 6.25vw;
+  font-weight: 800;
+  text-align: right;
+
+  width: 58.80vw;
+  height: 21.30vh;
+  margin-top: 28.43vh;
+  margin-right: 6.5vw;
+}
+
+.containerHome p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  line-height: 130%;
+  text-align: right;
+  color: #fff;
+
+  width: 37vw;
+  height: 14vh;
+  margin-top: 4.5vh;
+  margin-right: 7vw;
+}
+
+
+.containerHome button {
+  width: 19.5vw;
+  height: 8vh;
+  margin-right: 8.5vw;
+  margin-top: 4.3vh;
+  border-radius: 20px;
+
+  border: none;
+  background-color: #002640;
+  color: #fff;
+  font-family: 'DM Sans';
+  font-size: 1.5vw;
+  font-weight: 900;
+  transition: .3s;
+  box-shadow: 0 5px 15px rgb(4, 0, 5);
+}
+
+.containerHome button:hover {
+  transform: scale(1.1);
+  transition: .3s;
+  cursor: pointer;
+  background-color: #3a7297;
+  box-shadow: 0 5px 20px rgba(162, 168, 226, 0.8);
+}
+
+
+/* ================================================================================================ */
+
+.containerGases {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.container .imagens {
+  width: 35vw;
+  height: 48.51vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10vw;
+  margin-top: 20vh;
+}
+
+.containerGases .textos {
+  width: 40vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5.89vw;
+  margin-top: 20vh;
+}
+
+.containerGases .textos h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 3.33vw;
+  color: #1F1F1B;
+  opacity: 85%;
+  width: 41.67vw;
+  height: 7.5vh;
+}
+
+.containerGases .textos h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.67vw;
+  font-weight: bolder;
+  color: #002640;
+  margin-top: 2vh;
+}
+
+.containerGases .textos p {
+  font-size: 1.5vw;
+  font-weight: normal;
+  color: #1F1F1B;
+  margin-top: 1vh;
+  text-align: start;
+}
+
+.containerGases .textos p span {
+  font-weight: bold;
+}
+
+.containerGases .textos button {
+  border: none;
+  border-radius: 20px;
+  background-color: #002640;
+  padding-block: 3.6vh;
+  width: 33.33vw;
+
+  color: #fff;
+  font-family: 'DM Sans';
+  font-weight: bolder;
+  font-size: 1.5vw;
+
+  margin-top: 3vh;
+}
+
+.containerGases .imagens .img1 {
+  width: 26.64vw;
+  height: 29.3vh;
+  margin-left: 8.33vw;
+  position: absolute;
+}
+
+.containerGases .imagens .img2 {
+  width: 31.46vw;
+  height: 34.62vh;
+  margin-top: 7.41vh;
+  position: absolute;
+}
+
+.containerGases .imagens .img3 {
+  width: 24.17vw;
+  height: 26.29vh;
+  margin-top: 30vh;
+  margin-left: 10vw;
+  position: absolute;
+}
