@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AirGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="horizontal_nav">
+        <div class="logo">
+            <img src="images/logo.svg">
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Orçamento</a></li>
+                <li><a href="#" class="destaque_link">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="vertical_nav">
+        <ul>
+            <li>
+                <a href="dashboard.html" class="active">
+                    <span class="material-symbols-outlined">
+                        domain
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a href="dashboard_area.html">
+                    <span class="material-symbols-outlined">
+                        location_on
+                        </span>
+                </a>
+            </li>
+            <li>
+                <a href="dashboard_add_member.html">
+                    <span class="material-symbols-outlined">
+                        person_add
+                        </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="dashboard_header">
+            <h1>Medição geral</h1>
+            <p>Bem-vindo de volta, <strong>Air Guard ADM</strong></p>
+        </div>
+        <div class="dashboard_cards">
+            <div class="left">
+                <div class="row">
+                    <div class="card card1">
+                        <h3>Média da presença de CO por área</h3>
+                    </div>
+                    <div class="card card2">
+                        <h3>Média da presença de CO</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card card3">
+                        <h3>Média anual</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="card card4">
+                    <h3>Alertas</h3>
+                    <div class="alerts">
+                        <div class="alert alert1">
+                            <img src="images/img_area.png">
+                            <h4>Linha de produção 1</h4>
+                            <p>30ppm</p>
+                            <p class="comparison trending_up">
+                                <span class="material-symbols-outlined alert_icon">
+                                    trending_up
+                                </span>
+                                25%
+                            </p>
+                        </div>
+                        <div class="alert alert2">
+                            <img src="images/img_area.png">
+                            <h4>Linha de produção 2</h4>
+                            <p>30ppm</p>
+                            <p class="comparison trending_up">
+                                <span class="material-symbols-outlined alert_icon">
+                                    trending_up
+                                </span>
+                                25%
+                            </p>
+                        </div>
+                        <div class="alert alert3">
+                            <img src="images/img_area.png">
+                            <h4>Linha de produção 3</h4>
+                            <p>30ppm</p>
+                            <p class="comparison trending_up">
+                                <span class="material-symbols-outlined alert_icon">
+                                    trending_up
+                                </span>
+                                25%
+                            </p>
+                        </div>
+                        <div class="alert alert4">
+                            <img src="images/img_area.png">
+                            <h4>Linha de produção 4</h4>
+                            <p>30ppm</p>
+                            <p class="comparison trending_up">
+                                <span class="material-symbols-outlined alert_icon">
+                                    trending_up
+                                </span>
+                                25%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

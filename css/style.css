@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.60);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    height: calc(100vh - 100px);
+    width: 100px;
+}
+
+.horizontal_nav{
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 0 50px;
+    color: #fff;
+    top: 0;
+    width: 100vw;
+}
+.vertical_nav{
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+}
+
+.logo img{
+    width: 100px;
+}
+.links ul{
+    list-style-type: none;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: currentColor;
+    text-decoration: none;
+}
+.destaque_link{
+    border: 1px solid #fff;
+    padding: 2px 20px;
+    border-radius: 5px;
+}
+
+.vertical_nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.vertical_nav ul li{
+    width: 100%;
+    color: #fff;
+}
+.vertical_nav ul li a{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.vertical_nav ul li a span{
+    font-size: 36px;
+}
+.vertical_nav ul li a:hover, .vertical_nav ul li a.active{
+    background-color: rgba(0, 0, 0, 0.60);
+}
+.vertical_nav ul li a img.add_member{
+    width: 46px;
+}
+
+.dashboard_header{
+    margin: 180px 0 50px 180px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dashboard_cards{
+    display: flex;
+    width: 80vw;
+    height: 65vh;
+    margin-left: 100px;
+    gap: 44px;
+}
+.dashboard_cards .left{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+.dashboard_cards .left .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 44px;
+    height: 50%;
+}
+.card1{
+    flex: 2;
+}
+.card2{
+    flex: 3;
+}
+.card3{
+    flex: 1;
+}
+.dashboard_cards .card{
+    text-align: center;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.dashboard_cards .right{
+    flex: 4;
+}
+
+.alerts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 10px 0 10px;
+}
+.alerts .alert{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.alert_icon{
+    font-size: 18px !important;
+}
+.comparison{
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px;
+}
+.trending_up{
+    color: red;
+    border: 1px solid red;
+}
