@@ -93,19 +93,19 @@ nav ul li a{
     width: 80vw;
     height: 65vh;
     margin-left: 100px;
-    gap: 44px;
+    gap: 30px;
 }
 .dashboard_cards .left{
     flex: 6;
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 30px;
 }
 .dashboard_cards .left .row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 44px;
+    gap: 30px;
     height: 50%;
 }
 .card1{
@@ -168,7 +168,7 @@ nav ul li a{
 .kpi_card1{
     position: absolute;
     bottom: 116px;
-    left: 125px;
+    left: 132px;
 }
 .kpi_destaque{
     color: #ff0000;
@@ -232,4 +232,8 @@ nav ul li a{
 }
 .ranking_item .percentage, .header_percentage{
     flex: 1;
+}
+.percentage.below{
+    color: #E74C3C;
+    font-weight: 900;
 }

@@ -3,8 +3,8 @@ new Chart(COperArea, {
     data: {
         labels: [
             'Ideal',
-            'Prox. do ideal',
-            'Acima do ideal',
+            'Prox. do límite',
+            'Acima do límite',
         ],
         datasets: [{
             data: [20, 2, 1],
