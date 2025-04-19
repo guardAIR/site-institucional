@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root { 
+    --azulLetra:#006bb3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: none;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 12.5%;
+    background-color: black;
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    position: absolute;
+    left: 75px; 
+    height: 100px; 
+    width: auto;
+}
+
+
+.nav-links {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 150px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+  
+img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    z-index: -1;
+    opacity: 100%;
+}
+
+img#fundoRegistro{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  z-index: -1;
+  opacity: 100%;
+}
+
+form {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    background-color: transparent;
+    margin-left: 15.5%;
+    margin-top: 17.75%;
+}
+
+form.formRegistro{
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  margin-left: 60%;
+  margin-top: 17.75%;
+}
+
+
+form h4 {
+    font-weight: normal;
+    color: #555;
+    font-size: 20px; 
+  }
+  
+form h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  label {
+    font-size:  20px;
+    color: var(--azulLetra);
+    margin-top: 15px;
+    display: block;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border: 1px solid var(--azulLetra);
+    border-radius: 4px;
+  }
+  
+  .input-wrapper .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .btn-login, .btn-registro {
+    width: 100%;
+    background-color: var(--azulLetra);
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 22.5px;
+  }
+  
+  .btn-login:hover {
+    background-color: var(--azulLetra);
+   
+  }
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 16px 40px 8px 12px;
+    font-size: 16px;
+    border: 2px solid var(--azulLetra);
+    border-radius: 8px;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .input-wrapper .floating {
+    position: absolute;
+    left: 12px;
+    top: -28px;
+    color: var(--azulLetra);
+    font-size: 16px;
+    pointer-events: none;
+    background-color: white;
+    padding: 0 5px;
+    transition: 0.2s ease;
+  }
+  
+  .input-wrapper .icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+  }
+  
+  
+  
