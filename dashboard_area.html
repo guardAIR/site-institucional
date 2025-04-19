@@ -49,5 +49,579 @@
             </li>
         </ul>
     </nav>
+    <section class="dashboard_area">
+        <div class="dashboard_header dashboard_specific_header">
+            <h1>Medição especifica por área</h1>
+            <p>Acompanhe o nível de CO em cada uma das <strong>áreas</strong> e dos <strong>sensores</strong>.</p>
+        </div>
+        <div class="dashboard_specific_cards">
+            <div class="cards_header">
+                <ul>
+                    <li>Área</li>
+                    <li>Nível de atenção</li>
+                    <li>Gráfico em tempo-real</li>
+                    <li class="atual">Medição atual</li>
+                    <li class="variacao">Variação</li>
+                </ul>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 1</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area1_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 2</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas id="area2_geral" class="area_graph" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 3</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area3_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 4</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area4_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 5</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area5_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 6</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area6_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 7</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area7_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 8</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area8_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 9</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area9_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 10</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area10_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 11</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area11_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 12</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area12_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 13</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area13_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 14</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area14_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 15</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area15_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 16</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area16_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 17</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area17_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 18</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area18_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 19</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area19_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 20</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area20_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 21</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area21_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 22</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area22_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="images/img_area.png" alt="Área 1">
+                    <p class="area_name_specific">Linha de produção 23</p>
+                    <div class="attention_level">
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span class="marked"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <canvas class="area_graph" id="area23_geral" width="360" height="85"></canvas>
+                    <p>30ppm</p>
+                    <p class="comparison trending_up">
+                        <span class="material-symbols-outlined alert_icon">
+                            trending_up
+                        </span>
+                        25%
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/specific.js"></script>

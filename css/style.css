@@ -233,7 +233,79 @@ nav ul li a{
 .ranking_item .percentage, .header_percentage{
     flex: 1;
 }
-.percentage.below{
+.percentage.above{
     color: #E74C3C;
     font-weight: 900;
+}
+.dashboard_specific_cards ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 260px;
+    font-size: 22px;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.60);
+    gap: 130px;
+    margin-bottom: 10px;
+}
+.attention_level{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.attention_level span{
+    background-color: #bebebe;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.attention_level span.marked{
+    background-color: rgb(0, 109, 172);
+}
+.dashboard_specific_cards{
+    margin-left: 40px;
+}
+.dashboard_specific_cards .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.dashboard_specific_cards .cards .card{
+    display: flex;
+    align-items: center;
+    width: 1475px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 20px 40px;
+    border-radius: 20px;
+    gap: 80px;
+}
+.area_graph{
+    width: 360px !important;
+    height: 85px !important;
+}
+.cards .card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.dashboard_specific_cards{
+    padding: 0 45px;
+}
+.dashboard_specific_header{
+    margin-left: 207px;
+}
+.card .area_name_specific{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+.atual{
+    margin-left: -50px;
+}
+.variacao{
+    margin-left: -100px;
+}
+.dashboard_area{
+    padding-bottom: 100px;
 }
