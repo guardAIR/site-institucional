@@ -110,6 +110,7 @@ nav ul li a{
 }
 .card1{
     flex: 2;
+    position: relative;
 }
 .card2{
     flex: 3;
@@ -156,6 +157,79 @@ nav ul li a{
     padding: 5px;
 }
 .trending_up{
-    color: red;
-    border: 1px solid red;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+#COperArea{
+    margin: 0 auto;
+    width: 290px !important;
+    height: 290px !important;
+}
+.kpi_card1{
+    position: absolute;
+    bottom: 116px;
+    left: 125px;
+}
+.kpi_destaque{
+    color: #ff0000;
+    font-weight: 600;
+}
+#COlineGeneral{
+    margin-top: 25px;
+}
+.ranking{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.ranking_item{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.ranking_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #747474;
+    font-weight: 600;
+    font-size: 18px;
+}
+.ranking_item .bar_container{
+    width: 350px;
+    border: #d8d8d8 dashed 1px;
+    height: 30px;
+    flex: 4;
+}
+.header_comparison{
+    flex: 4;
+}
+.bar_container .red_bar{
+    background-color: #E74C3C;
+    height: 100%;
+}
+.bar_container .yellow_bar{
+    background-color: #F1C40F;
+    height: 100%;
+}
+.bar_container .green_bar{
+    background-color: #2ECC71;
+    height: 100%;
+}
+.bar_container .blackred_bar{
+    background-color: #5f0a00;
+    height: 100%;
+}
+.area_name, .header_area{
+    width: 200px;
+    text-align: left;
+    flex: 2;
+}
+.area_value, .header_concentration{
+    flex: 1;
+}
+.ranking_item .percentage, .header_percentage{
+    flex: 1;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
+
 <body>
     <nav class="horizontal_nav">
         <div class="logo">
@@ -30,21 +34,21 @@
                 <a href="dashboard.html" class="active">
                     <span class="material-symbols-outlined">
                         domain
-                        </span>
+                    </span>
                 </a>
             </li>
             <li>
                 <a href="dashboard_area.html">
                     <span class="material-symbols-outlined">
                         location_on
-                        </span>
+                    </span>
                 </a>
             </li>
             <li>
                 <a href="dashboard_add_member.html">
                     <span class="material-symbols-outlined">
                         person_add
-                        </span>
+                    </span>
                 </a>
             </li>
         </ul>
@@ -59,15 +63,70 @@
             <div class="left">
                 <div class="row">
                     <div class="card card1">
-                        <h3>Média da presença de CO por área</h3>
+                        <h3>Resumo de áreas</h3>
+                        <div class="kpi_card1">
+                            <span>Atenção:</span>
+                            <br>
+                            <span class="kpi_destaque">1 Área acima</span>
+                        </div>
+                        <canvas id="COperArea"></canvas>
                     </div>
                     <div class="card card2">
-                        <h3>Média da presença de CO</h3>
+                        <h3>Média da presença de CO em todas as áreas nas últimas 24h</h3>
+                        <canvas id="COlineGeneral"></canvas>
                     </div>
                 </div>
                 <div class="row">
                     <div class="card card3">
-                        <h3>Média anual</h3>
+                        <h3>5 Áreas com a maior concentração de CO</h3>
+                        <div class="ranking">
+                            <div class="ranking_header">
+                                <span class="header_area">Nome da área</span>
+                                <span class="header_comparison">Barra de comparação</span>
+                                <span class="header_concentration">ppm</span>
+                                <span class="header_percentage">%</span>
+                            </div>
+                            <div class="ranking_item">
+                                <span class="area_name">Linha de produção 1</span>
+                                <div class="bar_container">
+                                    <div class="bar blackred_bar" style="width: 107.69%; max-width: 100%;"></div>
+                                </div>
+                                <span class="area_value">42ppm</span>
+                                <div class="percentage">107%</div>
+                            </div>
+                            <div class="ranking_item">
+                                <span class="area_name">Linha de produção 2</span>
+                                <div class="bar_container">
+                                    <div class="bar red_bar" style="width: 76.92%; max-width: 100%;"></div>
+                                </div>
+                                <span class="area_value">30ppm</span>
+                                <div class="percentage">76%</div>
+                            </div>
+                            <div class="ranking_item">
+                                <span class="area_name">Linha de produção 3</span>
+                                <div class="bar_container">
+                                    <div class="bar yellow_bar" style="width: 58.97%; max-width: 100%;"></div>
+                                </div>
+                                <span class="area_value">23ppm</span>
+                                <div class="percentage">58%</div>
+                            </div>
+                            <div class="ranking_item">
+                                <span class="area_name">Linha de produção 4</span>
+                                <div class="bar_container">
+                                    <div class="bar yellow_bar" style="width: 41.03%; max-width: 100%;"></div>
+                                </div>
+                                <span class="area_value">16ppm</span>
+                                <div class="percentage">41%</div>
+                            </div>
+                            <div class="ranking_item">
+                                <span class="area_name">Linha de produção 5</span>
+                                <div class="bar_container">
+                                    <div class="bar green_bar" style="width: 25.64%; max-width: 100%;"></div>
+                                </div>
+                                <span class="area_value">10ppm</span>
+                                <div class="percentage">25%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +137,7 @@
                         <div class="alert alert1">
                             <img src="images/img_area.png">
                             <h4>Linha de produção 1</h4>
-                            <p>30ppm</p>
+                            <p>42ppm</p>
                             <p class="comparison trending_up">
                                 <span class="material-symbols-outlined alert_icon">
                                     trending_up
@@ -100,7 +159,7 @@
                         <div class="alert alert3">
                             <img src="images/img_area.png">
                             <h4>Linha de produção 3</h4>
-                            <p>30ppm</p>
+                            <p>23ppm</p>
                             <p class="comparison trending_up">
                                 <span class="material-symbols-outlined alert_icon">
                                     trending_up
@@ -111,7 +170,7 @@
                         <div class="alert alert4">
                             <img src="images/img_area.png">
                             <h4>Linha de produção 4</h4>
-                            <p>30ppm</p>
+                            <p>16ppm</p>
                             <p class="comparison trending_up">
                                 <span class="material-symbols-outlined alert_icon">
                                     trending_up
@@ -125,4 +184,8 @@
         </div>
     </section>
 </body>
+
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/script.js"></script>
