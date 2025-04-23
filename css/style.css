@@ -271,14 +271,17 @@ nav ul li a{
     gap: 30px;
 }
 .dashboard_specific_cards .cards .card{
-    display: flex;
-    align-items: center;
     width: 1475px;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     padding: 20px 40px;
     border-radius: 20px;
+}
+.dashboard_specific_cards .cards .card .card_row{
+    display: flex;
     gap: 80px;
+    position: relative;
+    align-items: center;
 }
 .area_graph{
     width: 360px !important;
@@ -308,4 +311,27 @@ nav ul li a{
 }
 .dashboard_area{
     padding-bottom: 100px;
+}
+.button_expand{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+.button_expand span{
+    font-size: 30px;
+    color: #4d4d4d;
+}
+.row_graphs .graph{
+    display: flex;
+}
+#bubble_chart, #limitPerArea_graph{
+    width: 700px !important;
+    height: 400px !important;
 }
