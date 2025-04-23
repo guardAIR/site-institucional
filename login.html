@@ -13,44 +13,62 @@
         <div class="nav-links">
           <a href="#sobre">Sobre nós</a>
           <a href="#orcamento">Orçamento</a>
-          <a href="#login">Entrar</a>
+          <a href="registro.html">Registro</a>
         </div>
-      </nav>
+        </nav>
             <img src="assets/img/fundoLogin.jpeg" alt=""> 
         <form>
             <h4>Que bom que você voltou,</h4>
             <h1>Faça login</h1>
 
             <div class="input-wrapper">
-                <input type="email" id="email" placeholder=" " required />
+                <input type="email" id="email" placeholder="exemplo@emal.com" required />
                 <label for="email" class="floating">E-mail</label>
                 <span class="icon">📧</span>
               </div>
               
               <div class="input-wrapper">
-                <input type="password" id="password" placeholder=" " required />
+                <input type="password" id="password" placeholder="************" required />
                 <label for="password" class="floating">Senha</label>
                 <span class="icon">👁️</span>
               </div>
-            <button type="submit" class="btn-login" onclick="login">Entrar</button>
-
+              <a href="registro.html" class="btn">Cadastre-se</a>
+            <button type="button" class="btn-login" onclick="login()">Entrar</button>
           </form>
         </div>
-      
-        <script> 
-          function login() {
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-      
-            const emailteste = 'sptech@gmail.com';
-            const passwordteste = '123';
-      
-            if (email === emailteste && password === passwordteste) {
-              alert('Login realizado com sucesso!');
-            } else {
-              alert('Email ou senha inválidos.');
-            }
-          }
-        </script>
-      </body>
-      </html>
+</body>
+</html>
+<script>
+  // Criação da variável tentativas modular
+  let tentativas = 0;
+
+  function login() {
+
+    // Coleta as informações do formulário
+    var email = document.getElementById('email').value;
+    var senha = document.getElementById('password').value;
+    
+    // Criação de variaveis fixas
+    const emailteste = 'sptech@gmail.com';
+    const senhateste = '123';
+    
+    // Verifica se o email e a senha estão corretos
+    if (email === emailteste && senha === senhateste) {
+      // Caso estejam corretos, exibe alerta e redireciona para outra página
+      alert('Login realizado com sucesso!');
+      window.location.href = 'DashBoard.';
+    } else {
+      // Caso estejam errados, incrementa o número de tentativas
+      tentativas++;
+      // Se o número de tentativas for igual ou maior que 3, "bloqueia o acesso".
+      if (tentativas >= 3) {
+        alert('Você excedeu o número máximo de tentativas. Tente novamente mais tarde.');
+      } else {
+        // Senão, informa o número atual de tentativas
+        alert(`Email ou senha inválidos. Tentativa ${tentativas} de 3.`);
+      }
+    }
+  }
+</script>
+
+
