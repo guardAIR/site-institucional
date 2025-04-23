@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard por área | AirGuard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="horizontal_nav">
+        <a href="/index.html" class="logo">
+            <img src="/assets/dashboard/logo.svg">
+        </a>
+        <div class="links">
+            <ul>
+                <li><a href="/pages/sobre-nos/sobre_nos.html">Sobre nós</a></li>
+                <li><a href="/pages/calculadora/calculadora.html">Orçamento</a></li>
+                <li><a href="/pages/cadastro/login.html" class="destaque_link">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="vertical_nav">
+        <ul>
+            <li>
+                <a href="dashboard.html">
+                    <span class="material-symbols-outlined">
+                        domain
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="dashboard_area.html" class="active">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <section class="dashboard_area">
+        <div class="dashboard_header dashboard_specific_header">
+            <h1>Medição especifica por área</h1>
+            <p>Acompanhe o nível de CO em cada uma das <strong>áreas</strong> e dos <strong>sensores</strong>.</p>
+        </div>
+        <div class="dashboard_specific_cards">
+            <div class="cards_header">
+                <ul>
+                    <li>Área</li>
+                    <li>Nível de atenção</li>
+                    <li>Gráfico em tempo-real</li>
+                    <li class="atual">Medição atual</li>
+                    <li class="variacao">Variação</li>
+                </ul>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 1">
+                        <p class="area_name_specific">Linha de produção 1</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area1_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area(this)" class="button_expand">
+                            <span class="material-symbols-outlined">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/scripts/specificDashboards.js"></script>
+
+<script>
+    function expandir_area(element) {
+        element.parentElement.parentElement.innerHTML += `
+            <div class="card_row">
+                a
+            </div>
+        `;
+    }
+</script>
