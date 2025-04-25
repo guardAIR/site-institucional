@@ -61,6 +61,28 @@ new Chart(COlineGeneral, {
         plugins: {
             legend: { 
                 display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "end",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
             }
         }
     }
