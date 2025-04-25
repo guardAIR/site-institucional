@@ -154,7 +154,7 @@ nav ul li a {
     border-radius: 20px;
     height: 100% !important;
     box-sizing: border-box;
-    padding: 2.083vw; /* 20px */
+    padding: 20px;
 }
 
 .dashboard_cards .right {
@@ -337,11 +337,11 @@ nav ul li a {
 }
 
 .dashboard_specific_cards .cards .card {
-    width: 77.604vw; /* 1475px */
+    width: 77.604vw;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 2.604vw 4.167vw; /* 20px 40px */
-    border-radius: 1.042vw; /* 20px */
+    padding: 20px 30px;
+    border-radius: 20px;
 }
 
 .dashboard_specific_cards .cards .card .card_row{
@@ -389,16 +389,16 @@ nav ul li a {
 }
 
 .button_expand {
-    padding: 0.926vh; /* 10px */
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     border: none;
-    margin-left: 1.042vw; /* 20px */
+    margin-left: 20px;
     cursor: pointer;
     position: absolute;
-    right: 0.521vw; /* 10px */
+    right: 10px;
 }
 
 .button_expand span {
@@ -411,8 +411,42 @@ nav ul li a {
 }
 
 #bubble_chart,
-#limitPerArea_graph {
+#limitPerArea_graph,
+#bubble_chart2,
+#limitPerArea_graph2,
+#bubble_chart3,
+#limitPerArea_graph3,
+#bubble_chart4,
+#limitPerArea_graph4,
+#bubble_chart5,
+#limitPerArea_graph5,
+#bubble_chart6,
+#limitPerArea_graph6,
+#bubble_chart7,
+#limitPerArea_graph7 {
     width: 36.458vw !important; /* 700px */
-    height: 45vh  !important; /* 400px */
+    height: 320px  !important; /* 400px */
     margin-top: 5vh;
+}
+
+#expand_1,
+#expand_2,
+#expand_3,
+#expand_4,
+#expand_5,
+#expand_6,
+#expand_7 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#expand_1.expanded,
+#expand_2.expanded,
+#expand_3.expanded,
+#expand_4.expanded,
+#expand_5.expanded,
+#expand_6.expanded,
+#expand_7.expanded {
+    max-height: 1000px;
 }

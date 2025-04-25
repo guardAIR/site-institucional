@@ -86,16 +86,238 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area(this)" class="button_expand">
-                            <span class="material-symbols-outlined">
+                        <button onclick="expandir_area1()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon1">
                                 keyboard_arrow_down
                             </span>
                         </button>
                     </div>
-                    <div class="card_row row_graphs">
+                    <div class="card_row row_graphs" id="expand_1">
                         <div class="graph graph1">
                             <canvas id="limitPerArea_graph" width="700" height="400"></canvas>
                             <canvas id="bubble_chart" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 2">
+                        <p class="area_name_specific">Linha de produção 2</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area2_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area2()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon2">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_2">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph2" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart2" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 3">
+                        <p class="area_name_specific">Linha de produção 3</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area3_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area3()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon3">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_3">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph3" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart3" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 4">
+                        <p class="area_name_specific">Linha de produção 4</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area4_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area4()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon4">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_4">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph4" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart4" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 5">
+                        <p class="area_name_specific">Linha de produção 5</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area5_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area5()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon5">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_5">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph5" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart5" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 6">
+                        <p class="area_name_specific">Linha de produção 6</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area6_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area6()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon6">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_6">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph6" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart6" width="700" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_row">
+                        <img src="/assets/dashboard/img_area.png" alt="Área 7">
+                        <p class="area_name_specific">Linha de produção 7</p>
+                        <div class="attention_level">
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span class="marked"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <canvas class="area_graph" id="area7_geral" width="360" height="85"></canvas>
+                        <p>30ppm</p>
+                        <p class="comparison trending_up">
+                            <span class="material-symbols-outlined alert_icon">
+                                trending_up
+                            </span>
+                            25%
+                        </p>
+                        <button onclick="expandir_area7()" class="button_expand">
+                            <span class="material-symbols-outlined" id="expandir_area_icon7">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+                    <div class="card_row row_graphs" id="expand_7">
+                        <div class="graph graph1">
+                            <canvas id="limitPerArea_graph7" width="700" height="400"></canvas>
+                            <canvas id="bubble_chart7" width="700" height="400"></canvas>
                         </div>
                     </div>
                 </div>
@@ -110,11 +332,103 @@
 <script src="/scripts/specificDashboards.js"></script>
 
 <script>
-    function expandir_area(element) {
-        element.parentElement.parentElement.innerHTML += `
-            <div class="card_row">
-                a
-            </div>
-        `;
+    let isExpanded1 = false;
+    let isExpanded2 = false;
+    let isExpanded3 = false;
+    let isExpanded4 = false;
+    let isExpanded5 = false;
+    let isExpanded6 = false;
+    let isExpanded7 = false;
+
+    function expandir_area1() {
+        const expandElement = document.getElementById('expand_1');
+        if (isExpanded1) {
+            expandElement.classList.remove('expanded');
+            isExpanded1 = false;
+            expandir_area_icon1.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded1 = true;
+            expandir_area_icon1.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    function expandir_area2() {
+        const expandElement = document.getElementById('expand_2');
+        if (isExpanded2) {
+            expandElement.classList.remove('expanded');
+            isExpanded2 = false;
+            expandir_area_icon2.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded2 = true;
+            expandir_area_icon2.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    function expandir_area3() {
+        const expandElement = document.getElementById('expand_3');
+        if (isExpanded3) {
+            expandElement.classList.remove('expanded');
+            isExpanded3 = false;
+            expandir_area_icon3.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded3 = true;
+            expandir_area_icon3.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    function expandir_area4() {
+        const expandElement = document.getElementById('expand_4');
+        if (isExpanded4) {
+            expandElement.classList.remove('expanded');
+            isExpanded4 = false;
+            expandir_area_icon4.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded4 = true;
+            expandir_area_icon4.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    
+    function expandir_area5() {
+        const expandElement = document.getElementById('expand_5');
+        if (isExpanded5) {
+            expandElement.classList.remove('expanded');
+            isExpanded5 = false;
+            expandir_area_icon5.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded5 = true;
+            expandir_area_icon5.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    function expandir_area6() {
+        const expandElement = document.getElementById('expand_6');
+        if (isExpanded6) {
+            expandElement.classList.remove('expanded');
+            isExpanded6 = false;
+            expandir_area_icon6.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded6 = true;
+            expandir_area_icon6.innerHTML = "keyboard_arrow_up";
+        }
+    }
+
+    function expandir_area7() {
+        const expandElement = document.getElementById('expand_7');
+        if (isExpanded7) {
+            expandElement.classList.remove('expanded');
+            isExpanded7 = false;
+            expandir_area_icon7.innerHTML = "keyboard_arrow_down";
+        } else {
+            expandElement.classList.add('expanded');
+            isExpanded7 = true;
+            expandir_area_icon7.innerHTML = "keyboard_arrow_up";
+        }
     }
 </script>
