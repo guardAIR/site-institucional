@@ -424,8 +424,8 @@ nav ul li a {
 #limitPerArea_graph6,
 #bubble_chart7,
 #limitPerArea_graph7 {
-    width: 36.458vw !important; /* 700px */
-    height: 320px  !important; /* 400px */
+    width: 36.458vw !important;
+    height: 320px !important;
     margin-top: 5vh;
 }
 

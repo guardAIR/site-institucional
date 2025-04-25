@@ -139,7 +139,7 @@ new Chart(area7_geral, {
 });
 
 
-const limitPerArea_graph1 = document.getElementById('limitPerArea_graph');
+const limitPerArea_graph1 = document.getElementById('limitPerArea_graph').getContext('2d');
 new Chart(limitPerArea_graph1, {
     type: 'bar',
     data: {
@@ -152,24 +152,41 @@ new Chart(limitPerArea_graph1, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
+
 
 const bubble_chart1 = document.getElementById('bubble_chart');
 new Chart(bubble_chart1, {
@@ -214,7 +231,7 @@ new Chart(bubble_chart1, {
     }
 })
 
-const limitPerArea_graph2 = document.getElementById('limitPerArea_graph2');
+const limitPerArea_graph2 = document.getElementById('limitPerArea_graph2').getContext('2d');
 new Chart(limitPerArea_graph2, {
     type: 'bar',
     data: {
@@ -227,24 +244,41 @@ new Chart(limitPerArea_graph2, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
+
 
 const bubble_chart2 = document.getElementById('bubble_chart2');
 new Chart(bubble_chart2, {
@@ -289,7 +323,7 @@ new Chart(bubble_chart2, {
     }
 })
 
-const limitPerArea_graph3 = document.getElementById('limitPerArea_graph3');
+const limitPerArea_graph3 = document.getElementById('limitPerArea_graph3').getContext('2d');
 new Chart(limitPerArea_graph3, {
     type: 'bar',
     data: {
@@ -302,23 +336,39 @@ new Chart(limitPerArea_graph3, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
 
 const bubble_chart3 = document.getElementById('bubble_chart3');
@@ -364,7 +414,7 @@ new Chart(bubble_chart3, {
     }
 })
 
-const limitPerArea_graph4 = document.getElementById('limitPerArea_graph4');
+const limitPerArea_graph4 = document.getElementById('limitPerArea_graph4').getContext('2d');
 new Chart(limitPerArea_graph4, {
     type: 'bar',
     data: {
@@ -377,23 +427,39 @@ new Chart(limitPerArea_graph4, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
 
 const bubble_chart4 = document.getElementById('bubble_chart4');
@@ -439,7 +505,7 @@ new Chart(bubble_chart4, {
     }
 })
 
-const limitPerArea_graph5 = document.getElementById('limitPerArea_graph5');
+const limitPerArea_graph5 = document.getElementById('limitPerArea_graph5').getContext('2d');
 new Chart(limitPerArea_graph5, {
     type: 'bar',
     data: {
@@ -452,23 +518,39 @@ new Chart(limitPerArea_graph5, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
 
 const bubble_chart5 = document.getElementById('bubble_chart5');
@@ -514,7 +596,7 @@ new Chart(bubble_chart5, {
     }
 })
 
-const limitPerArea_graph6 = document.getElementById('limitPerArea_graph6');
+const limitPerArea_graph6 = document.getElementById('limitPerArea_graph6').getContext('2d');
 new Chart(limitPerArea_graph6, {
     type: 'bar',
     data: {
@@ -527,26 +609,42 @@ new Chart(limitPerArea_graph6, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
 
-const bubble_char6 = document.getElementById('bubble_char6');
+const bubble_char6 = document.getElementById('bubble_chart6');
 new Chart(bubble_char6, {
     type: 'bubble',
     data: {
@@ -589,7 +687,7 @@ new Chart(bubble_char6, {
     }
 })
 
-const limitPerArea_graph7 = document.getElementById('limitPerArea_graph7');
+const limitPerArea_graph7 = document.getElementById('limitPerArea_graph7').getContext('2d');
 new Chart(limitPerArea_graph7, {
     type: 'bar',
     data: {
@@ -602,23 +700,39 @@ new Chart(limitPerArea_graph7, {
                 backgroundColor: '#006DAC',
                 fill: true,
                 borderRadius: 5
-            },
-            {
-                label: 'Límite de ppm (39ppm)',
-                data: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
-                type: 'line',
-                order: 4,
-                fill: false,
-                borderColor: '#f00',
-                borderDash: [5, 5],
-                tension: 0.3,
-                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-    }
+        plugins: {
+            legend: { 
+                display: false // remove a legenda do gráfico
+            },
+            annotation: {
+                annotations: {
+                    limiteGas: {
+                        type: 'line',
+                        yMin: 39,
+                        yMax: 39,
+                        borderColor: '#FF0000',
+                        borderWidth: 2,
+                        borderDash: [6, 4],
+                        label: {
+                            content: "Limite (39ppm)",
+                            enabled: true,
+                            backgroundColor: "#006DAC",
+                            color: "white",
+                            position: "start",
+                            font: {
+                                size: 14,
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    },
 });
 
 const bubble_chart7 = document.getElementById('bubble_chart7');
