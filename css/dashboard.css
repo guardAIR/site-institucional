@@ -566,7 +566,6 @@ h3{
 }
 .sensors_kpis h3{
     margin-left: 4.5vw;
-
 }
 .sensors_kpis_container{
     display: flex;
@@ -600,4 +599,7 @@ h3{
 }
 .sensor_kpi.alerta {
     background-color: #E74C3C;
+}
+.sensors_kpis_container, .sensors_graph{
+    margin-top: 1vh;
 }
