@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
-<body>
+<body class="specific_body">
     <nav class="horizontal_nav">
         <a href="/index.html" class="logo">
             <img src="/assets/dashboard/logo.svg">
@@ -62,7 +62,7 @@
                 </ul>
             </div>
             <div class="cards">
-                <div class="card">
+                <div class="card" onclick="expandir_area1()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 1">
                         <p class="area_name_specific">Linha de produção 1</p>
@@ -86,7 +86,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area1()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon1">
                                 keyboard_arrow_down
                             </span>
@@ -94,12 +94,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_1">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area2()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 2">
                         <p class="area_name_specific">Linha de produção 2</p>
@@ -123,7 +129,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area2()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon2">
                                 keyboard_arrow_down
                             </span>
@@ -131,12 +137,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_2">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph2" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart2" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph2" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart2" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area3()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 3">
                         <p class="area_name_specific">Linha de produção 3</p>
@@ -160,7 +172,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area3()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon3">
                                 keyboard_arrow_down
                             </span>
@@ -168,12 +180,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_3">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph3" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart3" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph3" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart3" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area4()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 4">
                         <p class="area_name_specific">Linha de produção 4</p>
@@ -197,7 +215,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area4()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon4">
                                 keyboard_arrow_down
                             </span>
@@ -205,12 +223,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_4">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph4" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart4" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph4" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart4" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area5()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 5">
                         <p class="area_name_specific">Linha de produção 5</p>
@@ -234,7 +258,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area5()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon5">
                                 keyboard_arrow_down
                             </span>
@@ -242,12 +266,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_5">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph5" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart5" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph5" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart5" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area6()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 6">
                         <p class="area_name_specific">Linha de produção 6</p>
@@ -271,7 +301,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area6()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon6">
                                 keyboard_arrow_down
                             </span>
@@ -279,12 +309,18 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_6">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph6" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart6" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph6" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart6" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="expandir_area7()">
                     <div class="card_row">
                         <img src="/assets/dashboard/img_area.png" alt="Área 7">
                         <p class="area_name_specific">Linha de produção 7</p>
@@ -308,7 +344,7 @@
                             </span>
                             25%
                         </p>
-                        <button onclick="expandir_area7()" class="button_expand">
+                        <button class="button_expand">
                             <span class="material-symbols-outlined" id="expandir_area_icon7">
                                 keyboard_arrow_down
                             </span>
@@ -316,8 +352,14 @@
                     </div>
                     <div class="card_row row_graphs" id="expand_7">
                         <div class="graph graph1">
-                            <canvas id="limitPerArea_graph7" width="700" height="400"></canvas>
-                            <canvas id="bubble_chart7" width="700" height="400"></canvas>
+                            <div class="first_graph">
+                                <h3>Nível de gás por hora</h3>
+                                <canvas id="limitPerArea_graph7" width="700" height="400"></canvas>
+                            </div>
+                            <div class="second_graph">
+                                <h3>Sensores espalhados pela área</h3>
+                                <canvas class="bubble_chart" id="bubble_chart7" width="700" height="400"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>

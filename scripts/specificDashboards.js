@@ -158,7 +158,7 @@ new Chart(limitPerArea_graph1, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -202,30 +202,40 @@ new Chart(bubble_chart1, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -250,7 +260,7 @@ new Chart(limitPerArea_graph2, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -294,30 +304,40 @@ new Chart(bubble_chart2, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -342,7 +362,7 @@ new Chart(limitPerArea_graph3, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -385,30 +405,40 @@ new Chart(bubble_chart3, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -433,7 +463,7 @@ new Chart(limitPerArea_graph4, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -476,30 +506,40 @@ new Chart(bubble_chart4, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -524,7 +564,7 @@ new Chart(limitPerArea_graph5, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -567,30 +607,40 @@ new Chart(bubble_chart5, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -615,7 +665,7 @@ new Chart(limitPerArea_graph6, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -658,30 +708,39 @@ new Chart(bubble_char6, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
+            }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
             }
         }
     }
@@ -706,7 +765,7 @@ new Chart(limitPerArea_graph7, {
     options: {
         responsive: true,
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
@@ -749,31 +808,41 @@ new Chart(bubble_chart7, {
                 { x: 20, y: 40, r: 18 },
                 { x: 50, y: 40, r: 24 },
                 { x: 80, y: 40, r: 25 },
-                
+
                 { x: 20, y: 60, r: 20 },
                 { x: 50, y: 60, r: 30 },
                 { x: 80, y: 60, r: 40 },
-                
+
                 { x: 20, y: 80, r: 5 },
                 { x: 50, y: 80, r: 19 }, // primeira linha
                 { x: 80, y: 80, r: 20 },
 
             ],
+            clip: false,
             borderColor: '#006DAC',
             backgroundColor: '#006DAC',
         }]
     },
 
+
     options: {
+        responsive: true,
         scales: {
-            y: {
+            x: {
+                display: false, // remove o eixo x do gráfico
                 min: 10,
                 max: 90
             },
-            x: {
+            y: {
+                display: false, // remove o eixo y do gráfico
                 min: 10,
                 max: 90
             }
-        }
+        },
+        plugins: {
+            legend: {
+                display: false // remove a legenda do gráfico
+            }
+        },
     }
-})
+});

@@ -6,6 +6,8 @@
 
 body {
     overflow-x: hidden;
+}
+.specific_body{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,9 +104,10 @@ nav ul li a {
 
 .dashboard_cards {
     display: flex;
-    width: 90vw;
+    width: 85vw;
     height: fit-content;
-    margin-left: 80px;
+    justify-content: center;
+    margin-left: 130px;
     gap: 30px; 
 }
 
@@ -127,17 +130,21 @@ nav ul li a {
 
 .section{
     width: 100vw;
-    height: 100vh;
+    height: 100vh;;
 }
 .card1 {
     flex: 1;
     position: relative;
+    box-sizing: border-box !important;
+    height: 300px !important;
 }
 
 .card2 {
+    max-height: 100% !important;
     flex: 3;
     padding: 10px !important;
-    height: 200px !important;
+    box-sizing: border-box !important;
+    height: 300px !important;
 }
 
 .card3 {
@@ -152,7 +159,6 @@ nav ul li a {
     text-align: center;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    height: 100% !important;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -204,8 +210,8 @@ nav ul li a {
 
 .kpi_card1 {
     position: absolute;
-    bottom: 13vh;
-    left: 7.25vw;
+    bottom: 12.5vh;
+    left: 6.5vw;
 }
 
 .kpi_card1 span{
@@ -245,9 +251,9 @@ nav ul li a {
 }
 
 .ranking_item .bar_container {
-    width: 18.229vw; /* 350px */
-    border: #d8d8d8 dashed 0.05208vw; /* 1px */
-    height: 1.563vh; /* 30px */
+    width: 18.229vw;
+    border: #d8d8d8 dashed 1px;
+    height: 20px;
     flex: 4;
 }
 
@@ -323,7 +329,7 @@ nav ul li a {
 }
 
 .attention_level span.marked {
-    background-color: rgb(0, 109, 172);
+    background-color: #006dac;
 }
 
 .dashboard_specific_cards {
@@ -333,7 +339,7 @@ nav ul li a {
 .dashboard_specific_cards .cards {
     display: flex;
     flex-direction: column;
-    gap: 1.563vw; /* 30px */
+    gap: 30px;
 }
 
 .dashboard_specific_cards .cards .card {
@@ -342,6 +348,11 @@ nav ul li a {
     box-sizing: border-box;
     padding: 20px 30px;
     border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.25s;
+}
+.dashboard_specific_cards .cards .card:hover {
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 .dashboard_specific_cards .cards .card .card_row{
@@ -408,25 +419,32 @@ nav ul li a {
 
 .row_graphs .graph {
     display: flex;
+    margin-top: 3vh;
 }
 
-#bubble_chart,
 #limitPerArea_graph,
-#bubble_chart2,
 #limitPerArea_graph2,
-#bubble_chart3,
 #limitPerArea_graph3,
-#bubble_chart4,
 #limitPerArea_graph4,
-#bubble_chart5,
 #limitPerArea_graph5,
-#bubble_chart6,
 #limitPerArea_graph6,
-#bubble_chart7,
 #limitPerArea_graph7 {
     width: 36.458vw !important;
     height: 320px !important;
-    margin-top: 5vh;
+    margin-top: 1vh;
+}
+#bubble_chart,
+#bubble_chart2,
+#bubble_chart3,
+#bubble_chart4,
+#bubble_chart5,
+#bubble_chart6,
+#bubble_chart7{
+    width: 30vw !important;
+    height: 260px !important;
+    margin: 4vh 0 0 4.5vw;
+    border-radius: 20px;
+    border: 5px solid #00263b;
 }
 
 #expand_1,
@@ -449,4 +467,12 @@ nav ul li a {
 #expand_6.expanded,
 #expand_7.expanded {
     max-height: 1000px;
+}
+
+.graph h3{
+    text-align: center;
+}
+
+.second_graph h3{
+    margin-left: 4.5vw;
 }
