@@ -15,6 +15,135 @@ const options_specific_geral = {
     }
 }
 
+const options_sensor_graph = {
+    plugins: {
+        legend: {
+            display: false // remove a legenda do gráfico
+        },
+        annotation: {
+            annotations: {
+                limiteGas: {
+                    type: 'line',
+                    yMin: 39,
+                    yMax: 39,
+                    borderColor: '#FF0000',
+                    borderWidth: 2,
+                    borderDash: [6, 4],
+                    label: {
+                        content: "Limite (39ppm)",
+                        enabled: true,
+                        backgroundColor: "#006DAC",
+                        color: "white",
+                        position: "start",
+                        font: {
+                            size: 14,
+                        },
+                    }
+                },
+                alertaMedio: {
+                    type: 'line',
+                    yMin: 30,
+                    yMax: 30,
+                    borderColor: '#FF9900',
+                    borderWidth: 2,
+                    borderDash: [6, 4],
+                    label: {
+                        content: "Alerta (30ppm)",
+                        enabled: true,
+                        backgroundColor: "#006DAC",
+                        color: "white",
+                        position: "start",
+                        font: {
+                            size: 14,
+                        },
+                    }
+                }
+            }
+        }
+    }
+}
+
+const options_limitPerArea_graph = {
+
+    plugins: {
+        legend: {
+            display: false // remove a legenda do gráfico
+        },
+        annotation: {
+            annotations: {
+                limiteGas: {
+                    type: 'line',
+                    yMin: 39,
+                    yMax: 39,
+                    borderColor: '#FF0000',
+                    borderWidth: 2,
+                    borderDash: [6, 4],
+                    label: {
+                        content: "Limite (39ppm)",
+                        enabled: true,
+                        backgroundColor: "#006DAC",
+                        color: "white",
+                        position: "start",
+                        font: {
+                            size: 14,
+                        },
+                    }
+                },
+                alertaMedio: {
+                    type: 'line',
+                    yMin: 30,
+                    yMax: 30,
+                    borderColor: '#FF9900',
+                    borderWidth: 2,
+                    borderDash: [6, 4],
+                    label: {
+                        content: "Alerta (30ppm)",
+                        enabled: true,
+                        backgroundColor: "#006DAC",
+                        color: "white",
+                        position: "start",
+                        font: {
+                            size: 14,
+                        },
+                    }
+                }
+            }
+        }
+    }
+}
+
+const options_bubble_graph = {
+    scales: {
+        x: {
+            display: false, // remove o eixo x do gráfico
+            min: 10,
+            max: 90
+        },
+        y: {
+            display: false, // remove o eixo y do gráfico
+            min: 10,
+            max: 90
+        }
+    },
+    plugins: {
+        legend: {
+            display: false // remove a legenda do gráfico
+        }
+    }
+}
+
+const options_alert_graph = {
+    scales: {
+        y: {
+            min: 0,
+            suggestedMax: 5,
+            ticks: {
+                stepSize: 1
+            }
+        }
+    },
+}
+
 const area1_geral = document.getElementById('area1_geral').getContext('2d');
 const gradient = area1_geral.createLinearGradient(0, 0, 0, 90); // criando gradiente para o fundo do gráfico
 gradient.addColorStop(0, 'rgb(0, 109, 172, .2)'); // cor azul para o início do gráfico
@@ -155,54 +284,7 @@ new Chart(limitPerArea_graph1, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 
@@ -237,25 +319,7 @@ new Chart(bubble_chart1, {
     },
 
 
-    options: {
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph2 = document.getElementById('limitPerArea_graph2').getContext('2d');
@@ -274,54 +338,7 @@ new Chart(limitPerArea_graph2, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 
@@ -356,26 +373,7 @@ new Chart(bubble_chart2, {
     },
 
 
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph3 = document.getElementById('limitPerArea_graph3').getContext('2d');
@@ -394,54 +392,7 @@ new Chart(limitPerArea_graph3, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 const bubble_chart3 = document.getElementById('bubble_chart3');
@@ -475,26 +426,7 @@ new Chart(bubble_chart3, {
     },
 
 
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph4 = document.getElementById('limitPerArea_graph4').getContext('2d');
@@ -513,54 +445,7 @@ new Chart(limitPerArea_graph4, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 const bubble_chart4 = document.getElementById('bubble_chart4');
@@ -592,28 +477,7 @@ new Chart(bubble_chart4, {
             backgroundColor: '#006DAC',
         }]
     },
-
-
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph5 = document.getElementById('limitPerArea_graph5').getContext('2d');
@@ -632,54 +496,7 @@ new Chart(limitPerArea_graph5, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 const bubble_chart5 = document.getElementById('bubble_chart5');
@@ -711,28 +528,7 @@ new Chart(bubble_chart5, {
             backgroundColor: '#006DAC',
         }]
     },
-
-
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph6 = document.getElementById('limitPerArea_graph6').getContext('2d');
@@ -751,54 +547,7 @@ new Chart(limitPerArea_graph6, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 const bubble_char6 = document.getElementById('bubble_chart6');
@@ -830,27 +579,7 @@ new Chart(bubble_char6, {
             backgroundColor: '#006DAC',
         }]
     },
-
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        }
-    }
+    options: options_bubble_graph
 })
 
 const limitPerArea_graph7 = document.getElementById('limitPerArea_graph7').getContext('2d');
@@ -869,54 +598,7 @@ new Chart(limitPerArea_graph7, {
             }
         ]
     },
-    options: {
-
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_limitPerArea_graph
 });
 
 const bubble_chart7 = document.getElementById('bubble_chart7');
@@ -948,28 +630,7 @@ new Chart(bubble_chart7, {
             backgroundColor: '#006DAC',
         }]
     },
-
-
-    options: {
-
-        scales: {
-            x: {
-                display: false, // remove o eixo x do gráfico
-                min: 10,
-                max: 90
-            },
-            y: {
-                display: false, // remove o eixo y do gráfico
-                min: 10,
-                max: 90
-            }
-        },
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            }
-        },
-    }
+    options: options_bubble_graph
 });
 
 const alert_graph1 = document.getElementById('alert_graph1').getContext('2d');
@@ -988,17 +649,7 @@ new Chart(alert_graph1, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph1 = document.getElementById('sensors_graph1').getContext('2d');
@@ -1017,53 +668,7 @@ new Chart(sensors_graph1, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph2 = document.getElementById('alert_graph2').getContext('2d');
@@ -1082,17 +687,7 @@ new Chart(alert_graph2, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph2 = document.getElementById('sensors_graph2').getContext('2d');
@@ -1111,53 +706,7 @@ new Chart(sensors_graph2, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph3 = document.getElementById('alert_graph3').getContext('2d');
@@ -1176,17 +725,7 @@ new Chart(alert_graph3, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph3 = document.getElementById('sensors_graph3').getContext('2d');
@@ -1205,53 +744,7 @@ new Chart(sensors_graph3, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph4 = document.getElementById('alert_graph4').getContext('2d');
@@ -1270,17 +763,7 @@ new Chart(alert_graph4, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph4 = document.getElementById('sensors_graph4').getContext('2d');
@@ -1299,53 +782,7 @@ new Chart(sensors_graph4, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph5 = document.getElementById('alert_graph5').getContext('2d');
@@ -1364,17 +801,7 @@ new Chart(alert_graph5, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph5 = document.getElementById('sensors_graph5').getContext('2d');
@@ -1393,53 +820,7 @@ new Chart(sensors_graph5, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph6 = document.getElementById('alert_graph6').getContext('2d');
@@ -1458,17 +839,7 @@ new Chart(alert_graph6, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph6 = document.getElementById('sensors_graph6').getContext('2d');
@@ -1487,53 +858,7 @@ new Chart(sensors_graph6, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
 
 const alert_graph7 = document.getElementById('alert_graph7').getContext('2d');
@@ -1552,17 +877,7 @@ new Chart(alert_graph7, {
             }
         ]
     },
-    options: {
-        scales: {
-            y: {
-                min: 0,
-                suggestedMax: 5,
-                ticks: {
-                    stepSize: 1
-                }
-            }
-        },
-    }
+    options: options_alert_graph
 });
 
 const sensors_graph7 = document.getElementById('sensors_graph7').getContext('2d');
@@ -1581,51 +896,5 @@ new Chart(sensors_graph7, {
             }
         ]
     },
-    options: {
-        plugins: {
-            legend: {
-                display: false // remove a legenda do gráfico
-            },
-            annotation: {
-                annotations: {
-                    limiteGas: {
-                        type: 'line',
-                        yMin: 39,
-                        yMax: 39,
-                        borderColor: '#FF0000',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Limite (39ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    },
-                    alertaMedio: {
-                        type: 'line',
-                        yMin: 30,
-                        yMax: 30,
-                        borderColor: '#FF9900',
-                        borderWidth: 2,
-                        borderDash: [6, 4],
-                        label: {
-                            content: "Alerta (30ppm)",
-                            enabled: true,
-                            backgroundColor: "#006DAC",
-                            color: "white",
-                            position: "start",
-                            font: {
-                                size: 14,
-                            },
-                        }
-                    }
-                }
-            }
-        }
-    },
+    options: options_sensor_graph
 });
