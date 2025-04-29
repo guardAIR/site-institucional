@@ -18,7 +18,7 @@
         <ul>
           <li><a href="../sobre-nos/sobre_nos.html">Sobre nós</a></li>
           <li><a href="../calculadora/calculadora.html">Orçamento</a></li>
-          <li><a href="/">Entrar</a></li>
+          <li><a href="login.html">Entrar</a></li>
         </ul>
       </section>
     </header>
@@ -27,18 +27,23 @@
       <h4>Seja bem-vindo a AirGuard</h4>
       <h1>Crie a sua conta</h1>
       <div class="input-wrapper">
-        <input type="email" id="email" placeholder="Exemplo@Email.com " required />
+        <input type="email" id="iptEmail" placeholder="Exemplo@Email.com " required />
         <label for="email" class="floating">E-mail</label>
         <span class="icon">📧</span>
       </div>
-      <div class="input-wrapper" id="iptSenha">
-        <input type="password" id="senha" placeholder="***********" required />
+      <div class="input-wrapper" id="Senha">
+        <input type="password" id="iptSenha" placeholder="***********" required />
         <label for="senha" class="floating">Senha</label>
         <button onclick="view()" class="icon">👁️</button>
       </div>
       <div class="input-wrapper">
-        <input type="text" id="nomeEmpresa" placeholder="Ex. Google" required>
+        <input type="text" id="iptEmpresa" placeholder="Ex. Google" required>
         <label for="nomeEmpresa" class="floating">Nome da Empresa</label>
+        <span class="error" id="nomeEmpresaError"></span>
+      </div>
+      <div class="input-wrapper">
+        <input type="number" id="iptCnpj" placeholder="CNPJ" required>
+        <label for="cnpjempresa" class="floating">Nome da Empresa</label>
         <span class="error" id="nomeEmpresaError"></span>
       </div>
       <button type="button" class="btn-registro" onclick="registrar()">Registrar</button>
@@ -64,9 +69,10 @@
 
   function registrar() {
     // Coleta as informações do formulário
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-    var empresa = document.getElementById("nomeEmpresa").value;
+    var email = iptEmail.value;
+    var senha = iptSenha.value;
+    var empresa = iptEmpresa.value;
+    var cnpj = iptCnpj.value;
 
     resultado.innerHTML = '';
 
@@ -89,6 +95,12 @@
     // Verifica se o nome da empresa foi preenchido
     if (empresa == '') {
       resultado.innerHTML += 'O nome da empresa não pode estar vazio.';
+      isValid = false;
+    }
+
+    // Verifica se o cnpj foi preenchido corretamente.
+    if (cnpj.length < 14) {
+      resultado.innerHTML += 'O CNPJ deve conter 14 caracteres.<br>';
       isValid = false;
     }
 

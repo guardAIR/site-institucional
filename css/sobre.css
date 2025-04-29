@@ -231,3 +231,166 @@ body {
 .card img {
     width: 100%;
 }
+
+/* Missao, Visao e valores*/
+.titulo-secao {
+    margin: 40px 0 20px 90px;
+    font-size: 3.5vw;
+    color: rgba(31, 31, 27, 0.86);
+}
+
+.bloco-info {
+    position: relative;
+    width: 85%;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    padding: 30px;
+    background-color: #000; 
+}
+
+.imagem-fundo-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.imagem-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    border-radius: 10px;
+}
+
+.conteudo-texto {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+
+/* Entre em contato */
+.secao-contato {
+    background-color: #00243B;
+    color: white;
+    padding: 60px 20px;
+}
+  
+.contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+  
+.texto-contato {
+    flex: 1;
+    min-width: 280px;
+}
+  
+.texto-contato h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+  
+.texto-contato p {
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.6;
+}
+  
+.formulario-contato {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.formulario-contato label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.formulario-contato input,
+.formulario-contato textarea {
+    padding: 10px;
+    border: 1px solid white;
+    background-color: #00243B;
+    color: white;
+    font-size: 1rem;
+    resize: none;
+}
+  
+.formulario-contato button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.formulario-contato button:hover {
+    background-color: #00b4ff;
+    border-color: #00b4ff;
+    color: #00243B;
+}
+
+  /* footer */
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #00243B;
+    color: white;
+    padding: 3rem 5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.rodape-logo {
+    max-width: 250px;
+}
+
+.rodape-logo img {
+    width: 15.5rem;
+    margin-bottom: 1rem;
+}
+
+.rodape-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.rodape-coluna h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.rodape-coluna p {
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+
+.rodape-coluna p:hover {
+    text-decoration: underline;
+}

@@ -59,7 +59,7 @@ new Chart(COlineGeneral, {
             }
         },
         plugins: {
-            legend: { 
+            legend: {
                 display: false // remove a legenda do gráfico
             },
             annotation: {
