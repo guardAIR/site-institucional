@@ -98,7 +98,7 @@ nav ul li a {
 
 
 .dashboard_header {
-    margin: 100px 0 20px 100px;
+    margin: 100px 0 20px 100px; 
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -108,7 +108,7 @@ nav ul li a {
     height: fit-content;
     justify-content: center;
     margin-left: 130px;
-    gap: 30px;
+    gap: 30px; 
 }
 
 .dashboard_cards .left {
