@@ -46,32 +46,22 @@
 
 </html>
 <script>
-  // Criação da variável tentativas modular
   let tentativas = 0;
 
   function login() {
-
-    // Coleta as informações do formulário
     var email = ipt_email.value;
     var senha = ipt_senha.value;
 
-    // Criação de variaveis fixas
     const emailteste = 'sptech@gmail.com';
     const senhateste = '123';
 
-    // Verifica se o email e a senha estão corretos
     if (email === emailteste && senha === senhateste) {
-      // Caso estejam corretos, exibe alerta e redireciona para outra página
-      alert('Login realizado com sucesso!');
       window.location.href = '/pages/dashboard/dashboard.html';
     } else {
-      // Caso estejam errados, incrementa o número de tentativas
       tentativas++;
-      // Se o número de tentativas for igual ou maior que 3, "bloqueia o acesso".
       if (tentativas >= 3) {
         alert('Você excedeu o número máximo de tentativas. Tente novamente mais tarde.');
       } else {
-        // Senão, informa o número atual de tentativas
         alert(`Email ou senha inválidos. Tentativa ${tentativas} de 3.`);
       }
     }
